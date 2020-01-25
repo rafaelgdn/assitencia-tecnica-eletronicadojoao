@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
       },
       street: Sequelize.STRING,
-      number: Sequelize.INTEGER,
+      number: Sequelize.STRING,
       complement: Sequelize.STRING,
       district: Sequelize.STRING,
       city: Sequelize.STRING,

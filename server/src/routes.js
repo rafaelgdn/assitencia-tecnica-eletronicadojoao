@@ -1,23 +1,25 @@
 import { Router } from 'express';
 import multer from 'multer';
 import multerConfig from './config/multer';
-import User from './app/models/User';
 
 import FileController from './app/controllers/FileController';
+import UserController from './app/controllers/UserController';
+import SessionController from './app/controllers/SessionController';
+import ServiceOrderController from './app/controllers/ServiceOrderController';
+
+import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
 const upload = multer(multerConfig);
 
-routes.get('/', async (req, res) => {
-  const user = await User.create({
-    name: 'Rafael Carvalho',
-    email: 'rafaeldecarvalho.ps@gmail.com',
-    password_hash: '123456',
-  });
+routes.post('/sessions', SessionController.store);
 
-  res.json(user);
-});
+// only the routes below will pass through the middleware
+routes.use(authMiddleware);
 
+routes.post('/users', UserController.store);
+routes.put('/users', UserController.update);
 routes.post('/files', upload.single('file'), FileController.store);
+routes.post('/service-order', ServiceOrderController.store);
 
 export default routes;

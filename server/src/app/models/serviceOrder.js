@@ -1,9 +1,10 @@
 import Sequelize, { Model } from 'sequelize';
 
-class Customer extends Model {
+class ServiceOrder extends Model {
   static init(sequelize) {
     super.init(
       {
+        date: Sequelize.DATE,
         budgetValue: Sequelize.STRING,
         budgetDescription: Sequelize.STRING,
         paymentSign: Sequelize.STRING,
@@ -24,4 +25,4 @@ class Customer extends Model {
   }
 }
 
-export default Customer;
+export default ServiceOrder;

@@ -23,6 +23,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      serie: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       customer_id: {
         type: Sequelize.INTEGER,
         references: { model: 'customers', key: 'id' },

@@ -4,10 +4,11 @@ class Equipment extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: Sequelize.STRING,
-        email: Sequelize.STRING,
-        cpf: Sequelize.STRING,
-        phone_number: Sequelize.BOOLEAN,
+        brand: Sequelize.STRING,
+        model: Sequelize.STRING,
+        defect: Sequelize.STRING,
+        accessories: Sequelize.STRING,
+        serie: Sequelize.STRING,
       },
       {
         sequelize,
@@ -18,7 +19,7 @@ class Equipment extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Costumer, { foreignKey: 'customer_id' });
+    this.belongsTo(models.Customer, { foreignKey: 'customer_id' });
   }
 }
 
