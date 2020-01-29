@@ -21,7 +21,7 @@ class ServiceOrder extends Model {
   static associate(models) {
     this.belongsTo(models.OrderStatus, { foreignKey: 'order_status_id' });
     this.belongsTo(models.Customer, { foreignKey: 'customer_id' });
-    this.belongsTo(models.Equipment, { foreignKey: 'equipment_id' });
+    this.belongsTo(models.Product, { foreignKey: 'product_id' });
   }
 }
 

@@ -13,7 +13,10 @@ module.exports = {
       district: Sequelize.STRING,
       city: Sequelize.STRING,
       state: Sequelize.STRING,
-      zipcode: Sequelize.STRING,
+      zipcode: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       country: {
         type: Sequelize.STRING,
         defaultValue: 'Brasil',

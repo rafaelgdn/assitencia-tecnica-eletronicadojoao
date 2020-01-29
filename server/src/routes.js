@@ -21,5 +21,6 @@ routes.post('/users', UserController.store);
 routes.put('/users', UserController.update);
 routes.post('/files', upload.single('file'), FileController.store);
 routes.post('/service-order', ServiceOrderController.store);
+routes.put('/service-order/:id', ServiceOrderController.update);
 
 export default routes;
