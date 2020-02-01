@@ -7,7 +7,7 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import ServiceOrderController from './app/controllers/ServiceOrderController';
 
-import authMiddleware from './app/middlewares/auth';
+// import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
 const upload = multer(multerConfig);
@@ -15,11 +15,12 @@ const upload = multer(multerConfig);
 routes.post('/sessions', SessionController.store);
 
 // only the routes below will pass through the middleware
-routes.use(authMiddleware);
+// routes.use(authMiddleware);
 
 routes.post('/users', UserController.store);
 routes.put('/users', UserController.update);
 routes.post('/files', upload.single('file'), FileController.store);
+routes.get('/service-order', ServiceOrderController.index);
 routes.post('/service-order', ServiceOrderController.store);
 routes.put('/service-order/:id', ServiceOrderController.update);
 

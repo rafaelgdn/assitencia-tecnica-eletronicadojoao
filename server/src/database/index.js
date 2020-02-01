@@ -9,7 +9,7 @@ import Customer from '../app/models/Customer';
 import Product from '../app/models/Product';
 import ServiceOrder from '../app/models/ServiceOrder';
 import OrderStatus from '../app/models/OrderStatus';
-import OrderStatusController from '../app/controllers/OrderStatusController';
+// import OrderStatusController from '../app/controllers/OrderStatusController';
 
 const models = [
   User,
@@ -33,7 +33,7 @@ class Database {
       .map(model => model.init(this.connection))
       .map(model => model.associate && model.associate(this.connection.models));
 
-    OrderStatusController.store();
+    // OrderStatusController.store();
   }
 }
 
