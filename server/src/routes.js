@@ -21,6 +21,7 @@ routes.post('/users', UserController.store);
 routes.put('/users', UserController.update);
 routes.post('/files', upload.single('file'), FileController.store);
 routes.get('/service-order', ServiceOrderController.index);
+routes.get('/service-order/:id', ServiceOrderController.show);
 routes.post('/service-order', ServiceOrderController.store);
 routes.put('/service-order/:id', ServiceOrderController.update);
 
