@@ -20,19 +20,19 @@ export default function Navbar() {
         <li>
           <a href="/">
             <MdLibraryBooks />
-            Cadastrar OS
+            Cadastrar
           </a>
         </li>
         <li>
           <a href="/">
             <MdSearch />
-            Pesquisar OS
+            Pesquisar
           </a>
         </li>
         <li>
           <a href="/">
             <MdAssignmentTurnedIn />
-            Finalizar OS
+            Finalizar
           </a>
         </li>
       </NavList>
@@ -41,13 +41,13 @@ export default function Navbar() {
         <li>
           <a href="/">
             <MdAddCircle />
-            Cadastrar Produto
+            Cadastrar
           </a>
         </li>
         <li>
           <a href="/">
             <MdSearch />
-            Pesquisar Produto
+            Pesquisar
           </a>
         </li>
       </NavList>

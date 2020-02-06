@@ -1,8 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
-
+  @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font: 14px 'Roboto', sans-serif;
+    font: 14px 'Poppins', sans-serif;
   }
 
   a {

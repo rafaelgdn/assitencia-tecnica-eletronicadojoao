@@ -25,7 +25,7 @@ export const Categories = styled.div`
   letter-spacing: 0.5px;
   margin-top: 50px;
   margin-bottom: 10px;
-  padding-left: 20px;
+  padding-left: 30px;
 `;
 
 export const NavList = styled.ul`
@@ -35,45 +35,23 @@ export const NavList = styled.ul`
     color: #a5a9ad;
     display: flex;
     align-items: center;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
-    height: 50px;
+    height: 40px;
     transition: 0.3s;
     padding-left: 30px;
     letter-spacing: 0.5px;
 
     &:hover {
       color: #fff;
-      background: rgba(202, 197, 49, 0.3);
+      background: rgba(202, 197, 49, 0.7);
     }
 
     svg {
       font-size: 20px;
-      margin-right: 7px;
+      margin-right: 15px;
     }
   }
-
-  /* li {
-    a {
-      color: #a5a9ad;
-      display: flex;
-      align-items: center;
-      font-weight: 400;
-      font-size: 16px;
-      height: 50px;
-      padding-left: 30px;
-
-      &:hover {
-        color: #fff;
-        background: rgba(202, 197, 49, 0.3);
-      }
-
-      svg {
-        font-size: 20px;
-        margin-right: 7px;
-      }
-    }
-  } */
 `;
 
 export const Logo = styled.span`
